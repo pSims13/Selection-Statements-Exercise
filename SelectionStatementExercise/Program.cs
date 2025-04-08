@@ -6,22 +6,29 @@
         static void Main(string[] args)
         {
             int favNumber = 29;
+            int userInput = 0;
 
-            Console.WriteLine("Try to guess my favorite number between 1-100.");
-            
-            int userInput = int.Parse(Console.ReadLine());
+            while (userInput != favNumber)
+            {
 
-            if (userInput < favNumber)
-            {
-                Console.WriteLine("Too low, try again.");
-            }
-            else if (userInput > favNumber)
-            {
-                Console.WriteLine("Too high, try again.");
-            }
-            else
-            {
-                Console.WriteLine("Congratulations! You guessed the number.");
+                Console.WriteLine("Try to guess my favorite number between 1-100.");
+                userInput =int.Parse(Console.ReadLine());
+
+
+
+                if (userInput < favNumber)
+                {
+                    Console.WriteLine("Too low, try again.");
+                }
+                else if (userInput > favNumber)
+                {
+                    Console.WriteLine("Too high, try again.");
+                }
+                else
+                {
+                    Console.WriteLine("Congratulations! You guessed the number.");
+                }
+
             }
 
 
