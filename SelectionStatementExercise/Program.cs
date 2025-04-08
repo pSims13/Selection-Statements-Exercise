@@ -2,33 +2,36 @@
 {
     public class Program
     {
-
         static void Main(string[] args)
         {
             //Exercise 1
-            
+
             int favNumber = 29;
+            int userInput = 0;
 
-            Console.WriteLine("Try to guess my favorite number between 1-100.");
-            
-            int userInput = int.Parse(Console.ReadLine());
+            while (userInput != favNumber)
+            {
+                Console.WriteLine("Try to guess my favorite number between 1-100.");
+                userInput = int.Parse(Console.ReadLine());
 
-            if (userInput < favNumber)
-            {
-                Console.WriteLine("Too low.");
+
+                if (userInput < favNumber)
+                {
+                    Console.WriteLine("Too low, try again.");
+                }
+                else if (userInput > favNumber)
+                {
+                    Console.WriteLine("Too high, try again.");
+                }
+                else
+                {
+                    Console.WriteLine("Congratulations! You guessed the number.");
+                }
             }
-            else if (userInput > favNumber)
-            {
-                Console.WriteLine("Too high.");
-            }
-            else
-            {
-                Console.WriteLine("Congratulations! You guessed the number.");
-            }
-            
-            
+
+
             //Exercise 2
-            
+
             Console.WriteLine("What is your favorite subject?");
             string favoriteSubject = Console.ReadLine();
 
@@ -54,18 +57,7 @@
                     Console.ReadLine();
                     Console.WriteLine("Thanks for sharing.");
                     break;
-                
-                
-                
-                
-                
-                
-                
-                
             }
-
-
-
         }
     }
 }
